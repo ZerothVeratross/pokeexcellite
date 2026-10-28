@@ -1,6 +1,11 @@
 {
   "group_order": [
     "gMapGroup_TownsAndRoutes",
+    "gMapGroup_RouteExtensions",
+    "gMapGroup_GreatOutdoors",
+    "gMapGroup_CaveExtensions",
+    "gMapGroup_TheDepths",
+    "gMapGroup_Architecture",
     "gMapGroup_IndoorLittleroot",
     "gMapGroup_IndoorOldale",
     "gMapGroup_IndoorDewford",
@@ -134,6 +139,21 @@
     "Underwater_Route129",
     "Underwater_Route105",
     "Underwater_Route125"
+  ],
+  "gMapGroup_RouteExtensions": [
+
+  ],
+  "gMapGroup_GreatOutdoors": [
+
+  ],
+  "gMapGroup_CaveExtensions": [
+
+  ],
+  "gMapGroup_TheDepths": [
+
+  ],
+  "gMapGroup_Architecture": [
+
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
