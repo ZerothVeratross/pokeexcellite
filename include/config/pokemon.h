@@ -17,7 +17,7 @@
                                                 // GEN_1/2/3/4/5/6/7: Yellow, Crystal, RSE, HGSS, B2W2, ORAS, USUM learnsets respectively.
                                                 // GEN_8: Use the following priority: BDSP for Gen1-4 Pokémon, then LA for species introduced in that game, then SwSh for species present in those games. Otherwise, use GEN_7.
                                                 // GEN_9: SV For species present in those games. Otherwise use GEN_8.
-#define P_EVOLUTION_LEVEL_1_LEARN   GEN_LATEST  // Since Gen 8, Pokémon evolving while at level 1 do not get the chance to learn their level 1 moves, while before they did.
+#define P_EVOLUTION_LEVEL_1_LEARN   GEN_7       // Since Gen 8, Pokémon evolving while at level 1 do not get the chance to learn their level 1 moves, while before they did.
 
 // Evolution settings
 #define P_FRIENDSHIP_EVO_THRESHOLD   GEN_LATEST  // Since Gen 8, Pokémon that evolve by friendship evolve at or above 160 friendship instead of 220.
@@ -54,7 +54,7 @@
 #define P_EV_CAP                         GEN_LATEST  // Since Gen 6, the max EVs per stat is 252 instead of 255.
 #define P_SHOW_TERA_TYPE                 GEN_8       // Since Gen 9, the Tera Type is shown on the summary screen.
 #define P_TM_LITERACY                    GEN_LATEST  // Since Gen 6, TM illiterate Pokémon can learn TMs that teach moves that are in their level-up learnsets.
-#define P_CAN_FORGET_HIDDEN_MOVE         FALSE       // If TRUE, Pokémon can forget any move, even if it is an HM.
+#define P_CAN_FORGET_HIDDEN_MOVE         TRUE        // If TRUE, Pokémon can forget any move, even if it is an HM.
 #define P_ASK_MOVE_CONFIRMATION          FALSE       // If FALSE, when a player decides not to learn a move, the game does not ask the player for confirmation.
 #define P_EGG_CYCLE_LENGTH               GEN_LATEST  // Since Gen 8, Egg cycles take half as many steps as before. Previous generations have some varied step counts around 255.
 #define P_ONLY_OBTAINABLE_SHINIES        FALSE       // If TRUE, Pokémon encountered in the Battle Pyramid or while catching is disabled won't be Shiny.
@@ -85,6 +85,6 @@
 #define SKIP_GAPS_EXCEPT_ONE             1              // Skips all gaps in the Pokédex other than one blank entry in between seen entries.
 #define SKIP_GAPS_EXCEPT_BEFORE_AFTER    2              // Skips all gaps in the Pokédex other than one before and after seen entries. Most similar to whats seen in Pokémon SV.
 #define SKIP_ALL_GAPS                    3              // Skips all gaps in the Pokédex.
-#define P_SKIP_POKEDEX_GAPS              DONT_SKIP_GAPS // Pokémon SV skip large gaps in the Pokédex.
+#define P_SKIP_POKEDEX_GAPS              SKIP_GAPS_EXCEPT_BEFORE_AFTER // Pokémon SV skip large gaps in the Pokédex.
 
 #endif // GUARD_CONFIG_POKEMON_H
