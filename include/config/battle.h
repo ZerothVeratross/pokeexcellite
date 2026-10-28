@@ -13,8 +13,8 @@
 
 // Experience settings
 #define B_EXP_CATCH                 GEN_LATEST // In Gen6+, the party gains experience when the player catches another Pokémon.
-#define B_TRAINER_EXP_MULTIPLIER    GEN_LATEST // In Gen7+, Trainer battles no longer increase total experience by 1.5x.
-#define B_SPLIT_EXP                 GEN_LATEST // In Gen6+, all Pokémon that participate in a battle gain full experience. In Gen5 and earlier, the total experience would be evenly split across them.
+#define B_TRAINER_EXP_MULTIPLIER    GEN_6      // In Gen7+, Trainer battles no longer increase total experience by 1.5x.
+#define B_SPLIT_EXP                 GEN_5      // In Gen6+, all Pokémon that participate in a battle gain full experience. In Gen5 and earlier, the total experience would be evenly split across them.
 #define B_SCALED_EXP                GEN_LATEST // In Gen5 and Gen7+, experience gain is weighted by the difference between the levels of the player's Pokémon and the target.
 #define B_UNEVOLVED_EXP_MULTIPLIER  GEN_LATEST // In Gen6+, if a Pokémon is at or past the level where it would be able to evolve, but it has not, it gains ~1.2x experience. This only applies to species with the EVO_LEVEL method.
 #define B_LEVEL_UP_NOTIFICATION     GEN_LATEST // In Gen9+, if a Pokémon gains enough experience to level up multiple times, a message is only displayed once.
@@ -39,7 +39,7 @@
 #define B_PARENTAL_BOND_DMG         GEN_LATEST // In Gen7+, Parental Bond's second hit does 25% of the initial hit's damage instead of 50%.
 #define B_MULTIPLE_TARGETS_DMG      GEN_LATEST // In Gen4+, damage dealt by moves that hit multiple targets at once is reduced to 75%. Previously, it was 50%, unless the move hit the entire field, in which case there was no reduction.
 #define B_STRUGGLE_RECOIL           GEN_LATEST // In Gen4+, Struggle's recoil is 1/4 of the user's max HP. In Gen2-3, it's 1/4 of the damage dealt, and in Gen1, 1/2 of it.
-#define B_RETURN_FRUSTRATION_DMG    GEN_LATEST // In Gen3+, Return and Frustration deal at least 1 damage. In Gen2, they deal none at the friendship value that gives them 0 power.
+#define B_RETURN_FRUSTRATION_DMG    GEN_2      // In Gen3+, Return and Frustration deal at least 1 damage. In Gen2, they deal none at the friendship value that gives them 0 power.
 
 // Type settings
 #define B_GHOSTS_ESCAPE             GEN_LATEST // In Gen6+, escape prevention fails on Ghost-types. Additionally, attempting to escape from a wild battle is always sucessful.
@@ -354,8 +354,8 @@
 #define B_SHOW_TARGETS                      TRUE       // If set to TRUE, all available targets will be shown before selecting a move in Double Battles.
 #define B_SHOW_CATEGORY_ICON                TRUE       // If set to TRUE, an icon in the summary and move relearner will show a move's category.
 #define B_HIDE_HEALTHBOX_IN_ANIMS           TRUE       // If set to TRUE, healthboxes will be hidden during move animations.
-#define B_WAIT_TIME_MULTIPLIER              16         // This determines how long text pauses for in battle. Vanilla is 16. Lower values result in faster battles.
-#define B_QUICK_MOVE_CURSOR_TO_RUN          FALSE      // If set to TRUE, pushing B in the battle menu in a wild encounter will move the cursor to the Run option.
+#define B_WAIT_TIME_MULTIPLIER              0          // This determines how long text pauses for in battle. Vanilla is 16. Lower values result in faster battles.
+#define B_QUICK_MOVE_CURSOR_TO_RUN          TRUE      // If set to TRUE, pushing B in the battle menu in a wild encounter will move the cursor to the Run option.
 #define B_RUN_TRAINER_BATTLE                TRUE       // If set to TRUE, players can run from Trainer battles as in Gen9+. This is treated as a white out.
 #define B_MOVE_DESCRIPTION_BUTTON           L_BUTTON   // If set to a button other than B_LAST_USED_BALL_BUTTON, pressing this button will open the move description menu.
 #define B_SHOW_USELESS_Z_MOVE_INFO          FALSE      // If set to TRUE, Z-Moves without additional effects, like newer generation status moves, will say "No additional effect."
@@ -371,7 +371,7 @@
 #define B_INCAPACITATED_CATCH_BONUS     GEN_LATEST // In Gen5+, the catch rate bonus for a sleeping or frozen Pokémon is 2.5x instead of 2x.
 #define B_LOW_LEVEL_CATCH_BONUS         GEN_LATEST // In Gen9+, a bonus is added to the catch rate when catching a Pokémon lower than level 13. In Gen8, the bonus is applied to Pokémon lower than level 20.
 #define B_MISSING_BADGE_CATCH_MALUS     GEN_LATEST // In Gen9+, a penalty is added to the catch rate when trying to catch a Pokémon 5 levels above the current obedience level, based on the number of Badges obtained.
-#define B_CRITICAL_CAPTURE              TRUE       // If set to TRUE, Critical Captures will be enabled.
+#define B_CRITICAL_CAPTURE              FALSE      // If set to TRUE, Critical Captures will be enabled.
 #define B_CRITICAL_CAPTURE_LOCAL_DEX    TRUE       // If set to FALSE, the Critical Capture chance is based off of the National Pokédex, estimated by enabled generations.
 #define B_CRITICAL_CAPTURE_IF_OWNED     GEN_LATEST // In Gen9+, a capture will appear critical if the Pokémon you're trying to catch is of a species that you have already caught.
 #define B_FLAG_VICTORY_CATCH_RANDOM     0          // If set, you will be prompted to throw a ball after the encounter has been defeated, catch rate is random. You can't capture the encounter in any other way.
@@ -381,7 +381,7 @@
 #define B_LAST_USED_BALL_BUTTON     R_BUTTON   // If last used Ball is implemented, this button (or button combination) will trigger throwing the last used Ball.
 #define B_LAST_USED_BALL_CYCLE      TRUE       // If set to TRUE, then holding B_LAST_USED_BALL_BUTTON while pressing the D-Pad cycles through the Balls.
 #define B_CATCH_SWAP_INTO_PARTY     GEN_LATEST // In Gen7+, the option to swap caught Pokémon into the party will appear, allowing you to send a different Pokémon to the Box.
-#define B_CATCH_SWAP_CHECK_HMS      TRUE       // If set to TRUE, the catch swap feature above will prevent returning Pokémon to the Box if they know HMs.
+#define B_CATCH_SWAP_CHECK_HMS      FALSE      // If set to TRUE, the catch swap feature above will prevent returning Pokémon to the Box if they know HMs.
 
 // Other settings
 #define B_MULTI_BATTLE_WHITEOUT         GEN_LATEST // In Gen4+, Multi Battles end when the player as well as their partner don't have any Pokémon left.
@@ -430,19 +430,19 @@
 #define SHOW_TYPES_ALWAYS   1                    // Always show types in battle.
 #define SHOW_TYPES_CAUGHT   2                    // Only show types if you've caught a Pokémon of that species.
 #define SHOW_TYPES_SEEN     3                    // Only show types if you've seen a Pokémon of that species.
-#define B_SHOW_TYPES        SHOW_TYPES_NEVER     // When to show type indicators next to Pokémon HP bars, while choosing a move after selecting a target Pokémon.
+#define B_SHOW_TYPES        SHOW_TYPES_SEEN      // When to show type indicators next to Pokémon HP bars, while choosing a move after selecting a target Pokémon.
 
 #define SHOW_EFFECTIVENESS_NEVER    0           // Never show type effectiveness when selecting moves.
 #define SHOW_EFFECTIVENESS_ALWAYS   1           // Always show type effectiveness when selecting moves.
 #define SHOW_EFFECTIVENESS_CAUGHT   2           // Only show type effectiveness if you've caught a Pokémon of that species.
 #define SHOW_EFFECTIVENESS_SEEN     3           // Only show type effectiveness if you've seen a Pokémon of that species.
-#define B_SHOW_EFFECTIVENESS        SHOW_EFFECTIVENESS_SEEN // If not SHOW_EFFECTIVENESS_NEVER, the PP string is replaced by a type effectiveness indicator based on the move and the target.
+#define B_SHOW_EFFECTIVENESS        SHOW_EFFECTIVENESS_NEVER // If not SHOW_EFFECTIVENESS_NEVER, the PP string is replaced by a type effectiveness indicator based on the move and the target.
 
 // Pokémon battle sprite settings
 #define B_ENEMY_MON_SHADOW_STYLE        GEN_LATEST // In Gen4+, all opposing Pokémon will have a shadow drawn beneath them.
 
 //  Battle UI settings
-#define B_MOVE_REARRANGEMENT_IN_BATTLE  GEN_LATEST  //  In Gen4+, move slots can no longer be rearranged in battle.
+#define B_MOVE_REARRANGEMENT_IN_BATTLE  GEN_3  //  In Gen4+, move slots can no longer be rearranged in battle.
 
 #define B_POOL_SETTING_CONSISTENT_RNG       FALSE    // If set to TRUE, the same Trainer will always generate the same pool on the same save file.
 #define B_POOL_SETTING_USE_FIXED_SEED       FALSE    // If set to TRUE, RNG will use the fixed seed defined in B_POOL_SETTING_FIXED_SEED.
