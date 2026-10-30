@@ -140,21 +140,13 @@
     "Underwater_Route105",
     "Underwater_Route125"
   ],
-  "gMapGroup_RouteExtensions": [
-
-  ],
+  "gMapGroup_RouteExtensions": [],
   "gMapGroup_GreatOutdoors": [
-
+    "FortreeBasin"
   ],
-  "gMapGroup_CaveExtensions": [
-
-  ],
-  "gMapGroup_TheDepths": [
-
-  ],
-  "gMapGroup_Architecture": [
-
-  ],
+  "gMapGroup_CaveExtensions": [],
+  "gMapGroup_TheDepths": [],
+  "gMapGroup_Architecture": [],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
     "LittlerootTown_BrendansHouse_2F",
