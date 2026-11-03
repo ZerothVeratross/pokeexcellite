@@ -9333,6 +9333,16 @@
       "secondary_tileset": "gTileset_Fortree",
       "border_filepath": "data/layouts/FortreeBasin/border.bin",
       "blockdata_filepath": "data/layouts/FortreeBasin/map.bin"
+    },
+    {
+      "id": "LAYOUT_FORTREE_SIPHON",
+      "name": "FortreeSiphon_Layout",
+      "width": 40,
+      "height": 80,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Underwater",
+      "border_filepath": "data/layouts/FortreeSiphon/border.bin",
+      "blockdata_filepath": "data/layouts/FortreeSiphon/map.bin"
     }
   ]
 }
